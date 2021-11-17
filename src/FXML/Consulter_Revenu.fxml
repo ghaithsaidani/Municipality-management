@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exited" prefHeight="900.0" prefWidth="1150.0" styleClass="stk" stylesheets="@../CSS/Consulter_ajouter_modifier.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.Consulter_Revenu_Controller">
+   <children>
+      <AnchorPane id="a" fx:id="container" prefHeight="200.0" prefWidth="200.0" styleClass="anchor">
+         <children>
+            <TableView fx:id="rev_table" layoutX="25.0" layoutY="175.0" onMousePressed="#selected" prefHeight="600.0" prefWidth="1100.0">
+              <columns>
+                <TableColumn fx:id="num" prefWidth="290.0" text="NUMÉRO" />
+                <TableColumn fx:id="montant" prefWidth="341.0" text="MONTANT" />
+                  <TableColumn fx:id="rev" prefWidth="249.0" text="REV" />
+                  <TableColumn fx:id="date" prefWidth="219.0" text="DATE" />
+              </columns>
+            </TableView>
+             <Button id="buttons" fx:id="supp" layoutX="200.0" layoutY="44.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="45.0">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../ICONS/icons8_waste_96px.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+             <Button id="buttons" fx:id="mod" layoutX="71.0" layoutY="44.0" mnemonicParsing="false" onAction="#open_modifier" prefHeight="45.0">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../ICONS/icons8_edit_property_96px_1.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+             <Button id="buttons" fx:id="add" layoutX="135.0" layoutY="44.0" mnemonicParsing="false" onAction="#open_ajouter" prefHeight="45.0">
+                 <graphic>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@../ICONS/icons8_add_96px_1.png" />
+                         </image>
+                     </ImageView>
+                 </graphic>
+             </Button>
+             <TextField fx:id="filtred_field" layoutX="725.0" layoutY="44.0" onMouseClicked="#exited" prefHeight="40.0" prefWidth="300.0" promptText="Rechercher" styleClass="searchfield">
+                 <padding>
+                     <Insets left="45.0" />
+                 </padding></TextField>
+             <ComboBox fx:id="cmb" layoutX="1025.0" layoutY="44.0" onMouseClicked="#exited" prefHeight="40.0" prefWidth="96.0" promptText="Categorie" />
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="740.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ICONS/icons8_search_96px_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

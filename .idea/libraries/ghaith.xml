@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ghaith">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/ghaith_jar/ghaith.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

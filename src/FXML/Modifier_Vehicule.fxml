@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1150.0" stylesheets="@../CSS/Consulter_ajouter_modifier.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.ModifierVehicule_Controller">
+   <children>
+      <AnchorPane fx:id="container" prefHeight="200.0" prefWidth="200.0" styleClass="anchor">
+         <children>
+            <JFXTextField fx:id="matricule" focusColor="#067bf0" layoutX="250.0" layoutY="114.0" onMouseClicked="#unfocus1" prefHeight="40.0" prefWidth="300.0" promptText="MATRICULE" unFocusColor="BLACK" />
+            <JFXTextField fx:id="type" focusColor="#067bf0" layoutX="250.0" layoutY="214.0" onMouseClicked="#unfocus2" prefHeight="40.0" prefWidth="300.0" promptText="TYPE" unFocusColor="BLACK" />
+            <JFXTextField fx:id="annee" focusColor="#067bf0" layoutX="250.0" layoutY="414.0" onMouseClicked="#unfocus4" prefHeight="40.0" prefWidth="300.0" promptText="ANNÉE" unFocusColor="BLACK" />
+            <JFXComboBox fx:id="etat" focusColor="#067bf0" layoutX="250.0" layoutY="314.0" onMouseClicked="#unfocus3" prefHeight="40.0" prefWidth="300.0" promptText="ETAT" unFocusColor="BLACK" />
+            <Button alignment="CENTER" layoutX="450.0" layoutY="625.0" mnemonicParsing="false" onAction="#modify" prefHeight="40.0" prefWidth="250.0" text="MODIFIER">
+               <font>
+                  <Font size="18.0" />
+               </font></Button>
+            <Button id="back" fx:id="ba" layoutX="39.0" layoutY="44.0" mnemonicParsing="false" onAction="#back" prefHeight="45.0" prefWidth="30.0">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ICONS/icons8_left_100px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label fx:id="lbl1" layoutX="250.0" layoutY="164.0" text="MATRICULE INCORRECTE" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl4" layoutX="250.0" layoutY="464.0" text="ANNÉE INCORRECTE" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl3" layoutX="250.0" layoutY="364.0" text="VOUS POUVEZ SELECTIONNEZ UN ETAT" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbl2" layoutX="250.0" layoutY="264.0" text="TYPE INCORRECTE" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

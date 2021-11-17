@@ -1,0 +1,68 @@
+
+.anchor{
+    -fx-background-color:white;
+    /*-fx-effect: dropshadow( three-pass-box, BLACK , 5, 0 , 0 , 5 );*/
+}
+
+.txtf{
+    -fx-background-color:#F7F7F7;
+    -fx-background-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-color:#0681fc;
+    -fx-border-width: 0px 0px 0px 5px;
+}
+
+.txtf:focused{
+    -fx-background-color:#F7F7F7;
+    -fx-background-radius: 0;
+    -fx-border-style: solid;
+    -fx-border-color:#6ab4fd;
+    -fx-border-width: 0px 0px 0px 5px;
+}
+
+.bu{
+    -fx-background-color:#0681fc;
+    -fx-background-radius: 20;
+
+}
+
+
+
+.bu:hover{
+    -fx-background-color: #389afc;
+    -fx-effect: dropshadow( two-pass-box, #909090 ,5, 0, 0, 0);
+    -fx-cursor: hand;
+}
+
+.bu:pressed{
+    -fx-background-color:#6ab4fd;
+
+}
+
+.b{
+    -fx-background-color:transparent;
+}
+
+
+
+#exit:hover{
+    -fx-cursor: hand;
+    -fx-background-color:#E81123;
+}
+
+#exit:pressed{
+    -fx-background-color:#FF6961;
+}
+
+
+
+#minimize:hover{
+    -fx-background-color:#414141;
+    -fx-cursor:hand;
+}
+
+#minimize:pressed{
+    -fx-background-color:#83878D;
+}
+
+

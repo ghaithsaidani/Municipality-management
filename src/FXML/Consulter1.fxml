@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exited" prefHeight="900.0" prefWidth="1150.0" stylesheets="@../CSS/Consulter_ajouter_modifier.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.ConsulterEmployé_Controller">
+    <children>
+          <AnchorPane fx:id="container" prefHeight="800.0" prefWidth="1150.0" styleClass="anchor">
+              <children>
+                  <TextField fx:id="filterField" layoutX="725.0" layoutY="44.0" onMouseClicked="#exited" prefHeight="40.0" prefWidth="300.0" promptText="Rechercher" styleClass="searchfield">
+               <padding>
+                  <Insets left="45.0" />
+               </padding></TextField>
+                  <ComboBox fx:id="combo" layoutX="1025.0" layoutY="44.0" onMouseClicked="#exited" prefHeight="40.0" prefWidth="96.0" promptText="Categorie" />
+                  <TableView fx:id="table" editable="true" layoutX="25.0" layoutY="175.0" onMousePressed="#selected" prefHeight="600.0" prefWidth="1100.0">
+                      <columns>
+                          <TableColumn fx:id="Id" prefWidth="100.0" text="ID" />
+                          <TableColumn fx:id="nom" prefWidth="100.0" text="NOM" />
+                          <TableColumn fx:id="Prenom" prefWidth="100.0" text="PRÉNOM" />
+                          <TableColumn fx:id="date_of_birth" prefWidth="130.0" text="DATE DE NAISSANCE" />
+                          <TableColumn fx:id="Adress" prefWidth="120.0" text="ADRESSE" />
+                          <TableColumn fx:id="mail_adress" prefWidth="130.0" text="ADRESSE E_MAIL" />
+                          <TableColumn fx:id="Phone_number" prefWidth="120.0" text="N° DE TÉLÉPHONE" />
+                          <TableColumn fx:id="Diplome" prefWidth="75.0" text="DIPLOME" />
+                          <TableColumn fx:id="poste" prefWidth="85.0" text="POSTE" />
+                          <TableColumn fx:id="année" prefWidth="139.0" text="ANNÉES " />
+                      </columns>
+                  </TableView>
+            <Button id="buttons" fx:id="supp" layoutX="200.0" layoutY="44.0" mnemonicParsing="false" onAction="#delete" prefHeight="45.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ICONS/icons8_waste_96px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttons" fx:id="mod" layoutX="71.0" layoutY="44.0" mnemonicParsing="false" onAction="#open_modifier" prefHeight="45.0" prefWidth="43.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ICONS/icons8_edit_property_96px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="buttons" fx:id="b" layoutX="135.0" layoutY="44.0" mnemonicParsing="false" onAction="#open_ajouter" prefHeight="45.0" prefWidth="38.0">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../ICONS/icons8_add_96px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="735.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ICONS/icons8_search_96px_1.png" />
+               </image>
+            </ImageView>
+              </children>
+          </AnchorPane>
+    </children>
+</StackPane>

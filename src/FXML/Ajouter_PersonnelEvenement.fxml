@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1150.0" stylesheets="@../CSS/Consulter_ajouter_modifier.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLERS.Ajouter_personnel_evenement_Controller">
+    <children>
+          <AnchorPane fx:id="container" prefHeight="800.0" prefWidth="1150.0" styleClass="anchor">
+              <children>
+                  <TextField fx:id="filterField" layoutX="725.0" layoutY="44.0" prefHeight="40.0" prefWidth="300.0" promptText="Rechercher" styleClass="searchfield">
+               <padding>
+                  <Insets left="45.0" />
+               </padding></TextField>
+                  <ComboBox fx:id="combo" layoutX="1025.0" layoutY="44.0" prefHeight="40.0" prefWidth="96.0" promptText="Categorie" />
+                  <TableView fx:id="table" editable="true" layoutX="25.0" layoutY="175.0" prefHeight="600.0" prefWidth="507.0">
+                      <columns>
+                          <TableColumn fx:id="Id" prefWidth="100.0" text="ID" />
+                          <TableColumn fx:id="nom" prefWidth="100.0" text="NOM" />
+                          <TableColumn fx:id="Prenom" prefWidth="100.0" text="PRÉNOM" />
+                          <TableColumn fx:id="tel" prefWidth="120.0" text="N° DE TÉLÉPHONE" />
+                          <TableColumn fx:id="poste" prefWidth="85.0" text="POSTE" />
+                      </columns>
+                  </TableView>
+                  <Button id="next" fx:id="next" contentDisplay="RIGHT" layoutX="983.0" layoutY="804.0" mnemonicParsing="false" onAction="#suiv" prefHeight="53.0" prefWidth="141.0" text="NEXT">
+                      <font>
+                          <Font size="18.0" />
+                      </font>
+                      <graphic>
+                          <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                  <Image url="@../ICONS/icons8_right_50px_1.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="735.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../ICONS/icons8_search_96px_1.png" />
+               </image>
+            </ImageView>
+            <TableView fx:id="table1" editable="true" layoutX="614.0" layoutY="175.0" prefHeight="600.0" prefWidth="507.0">
+               <columns>
+                  <TableColumn fx:id="Id1" prefWidth="100.0" text="ID" />
+                  <TableColumn fx:id="nom1" prefWidth="100.0" text="NOM" />
+                  <TableColumn fx:id="Prenom1" prefWidth="100.0" text="PRÉNOM" />
+                  <TableColumn fx:id="tel1" prefWidth="120.0" text="N° DE TÉLÉPHONE" />
+                  <TableColumn fx:id="poste1" prefWidth="85.0" text="POSTE" />
+               </columns>
+            </TableView>
+            <Button layoutX="514.0" layoutY="788.0" mnemonicParsing="false" onAction="#add" prefHeight="33.0" prefWidth="123.0" text="AJOUTER" />
+              </children>
+          </AnchorPane>
+    </children>
+</StackPane>
